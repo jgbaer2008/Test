@@ -114,6 +114,9 @@ function showhall(hall_code){
 	li:hover {
 		background-color: #DDD;
 	}
+	#login_form {
+		margin: 20px 0;
+	}
 	
 </style>
     </head>

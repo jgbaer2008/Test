@@ -23,7 +23,6 @@ function clearFormInput($data) {
 	body {
 		font-family: Arial,Verdana,sans-serif;
 	}
-	
 	table {
 		border-collapse: collapse;
 	}
@@ -37,12 +36,16 @@ function clearFormInput($data) {
 	tbody tr:hover {
 		background-color: #DDD;
 	}
-	
+	#login_form {
+		margin: 20px 0;
+	}
 </style>
     </head>
 	<body>
 		<h1>Summoners War - Halls drop rates</h1>
 <?php include 'login.php'; ?>
+
+<h2><a href="index.php">Back to statistics</a></h2>
 <?php
 if (isset($_SESSION['ID'])) {
 	$reqsql_mystats = "SELECT t_loot.loot_datetime, t_hall.hall_name, t_hall.hall_code, t_drop.drop_name, t_drop.drop_code, t_loot.drop_qty, t_loot.floor_nb FROM t_loot, t_hall, t_drop WHERE t_loot.id_acc=".$_SESSION['ID']." AND t_loot.id_hall=t_hall.id_hall AND t_loot.id_drop=t_drop.id_drop ORDER BY t_loot.loot_datetime DESC";
@@ -68,7 +71,7 @@ if (isset($_SESSION['ID'])) {
 	echo "\n";
 	
 	while ($row_mystats = mysqli_fetch_array($ressql_mystats)) {
-		echo date('d/m/T H:i:s',$row_mystats['loot_datetime']);
+		echo date('d/m/Y H:i:s',$row_mystats['loot_datetime']);
 		echo " ; ";
 		echo $row_mystats['loot_datetime'];
 		echo " ; ";
@@ -100,7 +103,7 @@ if (isset($_SESSION['ID'])) {
 			<th>Floor</th>
 			<th>Drop</th>
 			<th>drop code</th>
-			<th>Quantité</th>
+			<th>Quantity</th>
 		</tr>
 	</thead>
 	<tbody>

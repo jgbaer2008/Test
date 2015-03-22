@@ -1,3 +1,4 @@
+<div id="login_form">
 <?php
 
 if (!(isset($_SESSION['ID']))) {
@@ -14,7 +15,7 @@ if (!(isset($_SESSION['ID']))) {
 			$row_searchacc = mysqli_fetch_array($ressql_searchacc);
 			if ($row_searchacc['acc_pwd']==$form_login_password) {
 				$_SESSION['ID']=$row_searchacc['id_acc'];
-				echo "Logged in as ".stripslashes($row_searchacc['acc_name']).' - <a href="mystats.php">my Drop Statistics</a>';
+				echo "Logged in as ".stripslashes($row_searchacc['acc_name']).' - <a href="mystats.php">my Drop Statistics</a> - <a href="logout.php">Logout</a>';
 			} else {
 				echo "<b>Invalid password, try again!</b>";
 ?>
@@ -30,7 +31,7 @@ if (!(isset($_SESSION['ID']))) {
 			$reqsql_accacc = "INSERT INTO t_acc VALUES(NULL,'".$form_login_name."','".md5($form_login_password)."')";
 			mysqli_query($link, $reqsql_accacc) or die(mysqli_error($link));
 			$_SESSION['ID']=mysqli_insert_id($link);
-			echo "Logged in as ".stripslashes($form_login_name).' - <a href="mystats.php">my Drop Statistics</a>';
+			echo "Logged in as ".stripslashes($form_login_name).' - <a href="mystats.php">my Drop Statistics</a> - <a href="logout.php">Logout</a>';
 		}
 	} else {
 		//connect form
@@ -47,6 +48,7 @@ if (!(isset($_SESSION['ID']))) {
 	$reqsql_acc = "SELECT acc_name FROM t_acc WHERE id_acc=".$_SESSION['ID'];
 	$ressql_acc = mysqli_query($link, $reqsql_acc) or die(mysqli_error($link));
 	$row_acc = mysqli_fetch_array($ressql_acc);
-	echo "Logged in as ".stripslashes($row_acc['acc_name']).' - <a href="mystats.php">my Drop Statistics</a>';
+	echo "Logged in as ".stripslashes($row_acc['acc_name']).' - <a href="mystats.php">my Drop Statistics</a> - <a href="logout.php">Logout</a>';
 }
 ?>
+</div>
