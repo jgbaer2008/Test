@@ -15,6 +15,7 @@ function clearFormInput($data) {
 }
 
 if (isset($_POST['submit_stats'])) {
+
 	$id_hall = clearFormInput($_POST['drop_hall']);
 	$floor_nb = clearFormInput($_POST['drop_floor']);
 	$id_drop = clearFormInput($_POST['drop_drop']);
@@ -142,7 +143,11 @@ function showhall(hall_code){
 	$reqsql_hall = "SELECT * FROM t_hall";
 	$ressql_hall = mysqli_query($link, $reqsql_hall) or die(mysqli_error($link));
 	while ($row_hall = mysqli_fetch_array($ressql_hall)) {
-		?><li onclick="showhall('<?php echo $row_hall['hall_code']; ?>');"><input type="radio" name="drop_hall" id="drop_hall_<?php echo $row_hall['id_hall']; ?>" value="<?php echo $row_hall['id_hall']; ?>"><label for="drop_hall_<?php echo $row_hall['id_hall']; ?>"><?php echo '<img src="img/'.$row_hall['hall_code'].'.png" />'; ?> <?php echo stripslashes($row_hall['hall_name']); ?></label></li><?php
+		?><li onclick="showhall('<?php echo $row_hall['hall_code']; ?>');">
+		<input type="radio" name="drop_hall" id="drop_hall_<?php echo $row_hall['id_hall']; ?>" value="<?php echo $row_hall['id_hall']; ?>"
+		<?php if (isset($_POST['submit_stats'])) { if ($id_hall==$row_hall['id_hall']) { echo 'checked="checked"'; } } else { echo $row_hall['id_hall']; } ?>>
+		<label for="drop_hall_<?php echo $row_hall['id_hall']; ?>"><?php echo '<img src="img/'.$row_hall['hall_code'].'.png" />'; ?> <?php echo stripslashes($row_hall['hall_name']); ?></label>
+		</li><?php
 	}
 ?></ul>
 </td>
@@ -152,7 +157,7 @@ function showhall(hall_code){
 	$reqsql_floor = "SELECT * FROM t_floor";
 	$ressql_floor = mysqli_query($link, $reqsql_floor) or die(mysqli_error($link));
 	while ($row_floor = mysqli_fetch_array($ressql_floor)) {
-		?><li><input type="radio" name="drop_floor" id="drop_floor_<?php echo $row_floor['floor_nb']; ?>" value="<?php echo $row_floor['floor_nb']; ?>"><label for="drop_floor_<?php echo $row_floor['floor_nb']; ?>"><?php echo $row_floor['floor_nb']; ?></label></li><?php
+		?><li><input type="radio" name="drop_floor" id="drop_floor_<?php echo $row_floor['floor_nb']; ?>" value="<?php echo $row_floor['floor_nb']; ?>" <?php if (isset($_POST['submit_stats'])) { if ($floor_nb==$row_floor['floor_nb']) { echo 'checked="checked"'; } } ?>><label for="drop_floor_<?php echo $row_floor['floor_nb']; ?>"><?php echo $row_floor['floor_nb']; ?></label></li><?php
 	}
 ?></ul>
 </td>
@@ -161,7 +166,7 @@ function showhall(hall_code){
 <?php
 	mysqli_data_seek($ressql_hall,0);
 	while ($row_hall = mysqli_fetch_array($ressql_hall)) {
-?><ul id="list_drops_hall_<?php echo $row_hall['hall_code']; ?>" style="display:none;"><?php
+?><ul id="list_drops_hall_<?php echo $row_hall['hall_code']; ?>" <?php if (isset($_POST['submit_stats'])) { if ($id_hall==$row_hall['id_hall']) { echo 'style="display:inline-block;"'; } else { echo 'style="display:none;"'; } } else { echo 'style="display:none;"'; } ?>><?php
 		//Get drop list for each hall
 		$reqsql_hall_drops = "SELECT t_drop.drop_name, t_drop.drop_code, t_drop.id_drop FROM t_drop, t_hall_drop WHERE t_drop.drop_code=t_hall_drop.drop_code AND t_hall_drop.hall_code='".$row_hall['hall_code']."'";
 		$ressql_hall_drops = mysqli_query($link, $reqsql_hall_drops) or die(mysqli_error($link));

@@ -19,6 +19,7 @@ if (!(isset($_SESSION['ID']))) {
 			} else {
 				echo "<b>Invalid password, try again!</b>";
 ?>
+<span style="font-size: 20px; color: red;">THIS WEBSITE'S SECURITY IS NOT GUARANTEED.<br/>Use a login/password you wouldn't use anywhere else.</span>
 <form method="post" action="">
 	<input type="text" id="form_login_name" name="form_login_name" placeholder="Account name" value="<?php echo stripslashes($form_login_name); ?>" />
 	<input type="password" id="form_login_password" name="form_login_password" placeholder="Password" />
@@ -36,6 +37,7 @@ if (!(isset($_SESSION['ID']))) {
 	} else {
 		//connect form
 ?>
+<span style="font-size: 20px; color: red;">THIS WEBSITE'S SECURITY IS NOT GUARANTEED.<br/>Use a login/password you wouldn't use anywhere else.</span>
 <form method="post" action="">
 	<input type="text" id="form_login_name" name="form_login_name" placeholder="Account name" />
 	<input type="password" id="form_login_password" name="form_login_password" placeholder="Password" />
