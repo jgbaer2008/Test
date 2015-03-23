@@ -101,10 +101,10 @@ while ($row_hall = mysqli_fetch_array($ressql_halls)) {
 ?>
 </div>
 
-
+<h2>Raw Data CSV formatted</h2>
 <textarea style="width:100%; min-height: 250px;">
 <?php
-	echo "date time";
+	echo "date time (d/m/y h:m:s)";
 	echo " ; ";
 	echo "timestamp";
 	echo " ; ";
@@ -145,9 +145,10 @@ while ($row_hall = mysqli_fetch_array($ressql_halls)) {
 	mysqli_data_seek($ressql_mystats,0);
 ?>
 <table>
+	<caption><h2>Raw Data Logs</h2></caption>
 	<thead>
 		<tr>
-			<th>Date time</th>
+			<th>Date time (d/m/y h:m:s)</th>
 			<th>timestamp</th>
 			<th>Hall</th>
 			<th>hall code</th>
