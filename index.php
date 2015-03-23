@@ -48,6 +48,7 @@ if (isset($_POST['submit_stats'])) {
     <head>
         <meta charset="UTF-8" />
 		<title>Summoners War - Halls drop rates</title>
+		<link rel="stylesheet" href="css.css" />
 		<script>
 function show(obj){
 	window.document.getElementById(obj).style.display = "inline-block";
@@ -69,57 +70,6 @@ function showhall(hall_code){
 	show('list_drops_hall_'+hall_code);
 }
 		</script>
-<style>
-	body {
-		font-family: Arial,Verdana,sans-serif;
-	}
-	img {
-		max-width: 32px;
-		max-height: 32px;
-	}
-	
-	table {
-		border-collapse: collapse;
-	}
-	thead {
-		background-color: #EEE;
-	}
-	td, th {
-		border: 1px solid black;
-		padding: 2px 4px;
-	}
-	tbody tr:hover {
-		background-color: #DDD;
-	}
-	
-	tbody#table_form tr:hover {
-		background-color: transparent;
-	}
-	
-	#table_form td {
-		vertical-align: top;
-	}
-	
-	ul {
-		list-style:none;
-		padding: 0;
-		margin: 0;
-	}
-	
-	li {
-		padding: 8px 0;
-	}
-	label {
-		padding: 8px 16px;
-	}
-	li:hover {
-		background-color: #DDD;
-	}
-	#login_form {
-		margin: 20px 0;
-	}
-	
-</style>
     </head>
 	<body>
 		<h1>Summoners War - Halls drop rates</h1>

@@ -19,27 +19,7 @@ function clearFormInput($data) {
     <head>
         <meta charset="UTF-8" />
 		<title>Summoners War - Halls drop rates</title>
-<style>
-	body {
-		font-family: Arial,Verdana,sans-serif;
-	}
-	table {
-		border-collapse: collapse;
-	}
-	thead {
-		background-color: #EEE;
-	}
-	td, th {
-		border: 1px solid black;
-		padding: 2px 4px;
-	}
-	tbody tr:hover {
-		background-color: #DDD;
-	}
-	#login_form {
-		margin: 20px 0;
-	}
-</style>
+		<link rel="stylesheet" href="css.css" />
     </head>
 	<body>
 		<h1>Summoners War - Halls drop rates</h1>
