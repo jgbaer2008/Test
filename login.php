@@ -6,7 +6,7 @@ if (!(isset($_SESSION['ID']))) {
 	if (isset($_POST['form_login_submit'])) {
 		//connecting
 		$form_login_name = addslashes(clearFormInput($_POST['form_login_name']));
-		$form_login_password = md5($_POST['form_login_password']);
+		$form_login_password = md5(trim($_POST['form_login_password']));
 		
 		$reqsql_searchacc = "SELECT * FROM t_acc WHERE acc_name='".$form_login_name."'";
 		$ressql_searchacc = mysqli_query($link, $reqsql_searchacc) or die(mysqli_error($link));
@@ -29,7 +29,7 @@ if (!(isset($_SESSION['ID']))) {
 			}
 		} else {
 			//create account
-			$reqsql_accacc = "INSERT INTO t_acc VALUES(NULL,'".$form_login_name."','".md5($form_login_password)."')";
+			$reqsql_accacc = "INSERT INTO t_acc VALUES(NULL,'".$form_login_name."','".$form_login_password."')";
 			mysqli_query($link, $reqsql_accacc) or die(mysqli_error($link));
 			$_SESSION['ID']=mysqli_insert_id($link);
 			echo "Logged in as ".stripslashes($form_login_name).' - <a href="mystats.php">my Drop Statistics</a> - <a href="logout.php">Logout</a>';
@@ -54,3 +54,4 @@ if (!(isset($_SESSION['ID']))) {
 }
 ?>
 </div>
+<h2 style="color:red;">I recently made a mistake while coding the password encryption, it ended up encrypted twice. If you can't log into your account, contact me on twitter @Neirdan</h2>
