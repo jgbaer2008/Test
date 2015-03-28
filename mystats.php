@@ -36,6 +36,13 @@ if (isset($_SESSION['ID'])) {
 <div id="stats">
 <?php
 
+//Global stats
+$reqsql_countloots = "SELECT count(id_loot) as nb FROM t_loot WHERE id_acc=".$_SESSION['ID'];
+$ressql_countloots = mysqli_query($link, $reqsql_countloots) or die(mysqli_error($link));
+$row_countloots = mysqli_fetch_array($ressql_countloots);
+
+echo "<h2>".$row_countloots['nb']." total records</h2><hr/>";
+
 $reqsql_halls = "SELECT * FROM t_hall";
 $ressql_halls = mysqli_query($link, $reqsql_halls) or die(mysqli_error($link));
 while ($row_hall = mysqli_fetch_array($ressql_halls)) {
@@ -96,6 +103,9 @@ while ($row_hall = mysqli_fetch_array($ressql_halls)) {
 ?>
 	</tbody>
 </table>
+<br/>
+<br/>
+<hr/>
 <?php
 }
 ?>

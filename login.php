@@ -54,4 +54,4 @@ if (!(isset($_SESSION['ID']))) {
 }
 ?>
 </div>
-<h2 style="color:red;">I recently made a mistake while coding the password encryption, it ended up encrypted twice. If you can't log into your account, contact me on twitter @Neirdan</h2>
+<h4>dev twitter contact: <a href="https://twitter.com/Neirdan">@Neirdan</a></h4>
