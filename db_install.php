@@ -73,6 +73,8 @@ array_push($req_array_content,"INSERT INTO t_hall VALUES(NULL,'Hall of Fire','fi
 array_push($req_array_content,"INSERT INTO t_hall VALUES(NULL,'Hall of Wind','wind')");
 array_push($req_array_content,"INSERT INTO t_hall VALUES(NULL,'Hall of Water','water')");
 array_push($req_array_content,"INSERT INTO t_hall VALUES(NULL,'Hall of Magic','magic')");
+array_push($req_array_content,"INSERT INTO t_hall VALUES(NULL,'Giant\'s Keep','giant')");
+array_push($req_array_content,"INSERT INTO t_hall VALUES(NULL,'Dragon\'s Lair','dragon')");
 
 array_push($req_array_content,"INSERT INTO t_floor VALUES(NULL,1)");
 array_push($req_array_content,"INSERT INTO t_floor VALUES(NULL,2)");
@@ -110,10 +112,27 @@ array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Unknown scroll','
 array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Mystical scroll','scroll_m',1,1)");
 array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Secret dungeon','secret_d',1,1)");
 array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Summoning stone','stone',1,5)");
+//runes
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Blade rune','blade',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Despair rune','despair',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Endure rune','endure',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Energy rune','energy',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Fatal rune','fatal',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Focus rune','focus',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Guard rune','guard',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Nemesis rune','nemesis',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Rage rune','rage',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Revenge rune','revenge',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Shield rune','shield',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Swift rune','swift',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Vampire rune','vampire',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Violent rune','violent',1,1)");
+array_push($req_array_content,"INSERT INTO t_drop VALUES(NULL,'Will rune','will',1,1)");
 
 //Drop table
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'light','angelmon')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'light','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'light','rainbowmon3')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'light','light_low')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'light','light_mid')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'light','light_high')");
@@ -124,6 +143,7 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'light','ston
 
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dark','angelmon')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dark','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dark','rainbowmon3')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dark','dark_low')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dark','dark_mid')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dark','dark_high')");
@@ -134,6 +154,7 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dark','stone
 
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'fire','angelmon')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'fire','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'fire','rainbowmon3')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'fire','fire_low')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'fire','fire_mid')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'fire','fire_high')");
@@ -144,6 +165,7 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'fire','stone
 
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'water','angelmon')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'water','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'water','rainbowmon3')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'water','water_low')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'water','water_mid')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'water','water_high')");
@@ -154,6 +176,7 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'water','ston
 
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','angelmon')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','rainbowmon3')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','wind_low')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','wind_mid')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','wind_high')");
@@ -163,6 +186,7 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','secre
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'wind','stone')");
 
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','rainbowmon3')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','scroll')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','scroll_m')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','magic_low')");
@@ -184,6 +208,35 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','wind
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','wind_mid')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','wind_high')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'magic','stone')");
+
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','rainbowmon3')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','scroll')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','scroll_m')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','despair')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','energy')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','fatal')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','blade')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','rage')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','swift')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','focus')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','stone')");
+
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','rainbowmon2')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','rainbowmon3')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','scroll')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','scroll_m')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','vampire')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','endure')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','violent')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','guard')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','will')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','nemesis')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','shield')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','revenge')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','stone')");
+
+
 
 //Connect
 include 'db_connect.php';
