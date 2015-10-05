@@ -55,3 +55,5 @@ if (!(isset($_SESSION['ID']))) {
 ?>
 </div>
 <h4>dev twitter contact: <a href="https://twitter.com/Neirdan">@Neirdan</a></h4>
+<h4>Thanks for your help: <a href="https://twitter.com/KlabusterRob">@KlabusterRob</a></h4>
+<h4><a href="https://bitbucket.org/Neirdan/sw-dungeons-stats">Code is open source</a></h4>
