@@ -219,7 +219,6 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','fata
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','blade')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','rage')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','swift')");
-array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','focus')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'giant','stone')");
 
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','rainbowmon2')");
@@ -231,6 +230,7 @@ array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','end
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','violent')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','guard')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','will')");
+array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','focus')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','nemesis')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','shield')");
 array_push($req_array_content,"INSERT INTO t_hall_drop VALUES(NULL,'dragon','revenge')");
